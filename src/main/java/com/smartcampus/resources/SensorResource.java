@@ -51,9 +51,15 @@ public class SensorResource {
 
     @POST
     public Response createSensor(Sensor sensor) {
+        if (sensor.getRoomId() == null) {
+            throw new LinkedResourceNotFoundException("The referenced room 'null' does not exist.");
+        }
         Room room = dataStore.getRooms().get(sensor.getRoomId());
         if (room == null) {
             throw new LinkedResourceNotFoundException("The referenced room '" + sensor.getRoomId() + "' does not exist.");
+        }
+        if (sensor.getId() == null || sensor.getId().trim().isEmpty()) {
+            sensor.setId(java.util.UUID.randomUUID().toString());
         }
         dataStore.getSensors().put(sensor.getId(), sensor);
         

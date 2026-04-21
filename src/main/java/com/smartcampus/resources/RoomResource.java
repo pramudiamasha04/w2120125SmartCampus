@@ -39,6 +39,9 @@ public class RoomResource {
 
     @POST
     public Response createRoom(Room room) {
+        if (room.getId() == null || room.getId().trim().isEmpty()) {
+            room.setId(java.util.UUID.randomUUID().toString());
+        }
         dataStore.getRooms().put(room.getId(), room);
         return Response.status(Response.Status.CREATED).entity(room).build();
     }
