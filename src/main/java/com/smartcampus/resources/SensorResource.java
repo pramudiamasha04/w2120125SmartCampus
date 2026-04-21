@@ -66,4 +66,13 @@ public class SensorResource {
         
         return Response.status(Response.Status.CREATED).entity(sensor).build();
     }
+
+    @Path("/{sensorId}/readings")
+    public SensorReadingResource getSensorReadingResource(@PathParam("sensorId") String sensorId) {
+        Sensor sensor = dataStore.getSensors().get(sensorId);
+        if (sensor == null) {
+            throw new jakarta.ws.rs.WebApplicationException(Response.Status.NOT_FOUND);
+        }
+        return new SensorReadingResource(sensorId);
+    }
 }
