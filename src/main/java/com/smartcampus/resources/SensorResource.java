@@ -5,15 +5,15 @@ import com.smartcampus.exceptions.LinkedResourceNotFoundException;
 import com.smartcampus.models.Room;
 import com.smartcampus.models.Sensor;
 
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.QueryParam;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,7 +71,7 @@ public class SensorResource {
     public SensorReadingResource getSensorReadingResource(@PathParam("sensorId") String sensorId) {
         Sensor sensor = dataStore.getSensors().get(sensorId);
         if (sensor == null) {
-            throw new jakarta.ws.rs.WebApplicationException(Response.Status.NOT_FOUND);
+            throw new javax.ws.rs.WebApplicationException(Response.Status.NOT_FOUND);
         }
         return new SensorReadingResource(sensorId);
     }
