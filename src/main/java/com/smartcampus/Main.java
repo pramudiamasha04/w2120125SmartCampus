@@ -14,15 +14,15 @@ public class Main {
         tomcat.setPort(8080);
         tomcat.getConnector(); // Trigger the creation of the default connector
 
-        // Set up the context path
-        Context context = tomcat.addContext("", new File(".").getAbsolutePath());
+        // Set up the context path to /api/v1
+        Context context = tomcat.addContext("/api/v1", new File("src/main/webapp").getAbsolutePath());
 
         // Configure the Jersey ServletContainer
         Tomcat.addServlet(context, "jersey-container-servlet", 
             new ServletContainer(new RestApplication()));
 
-        // Map all requests to the Jersey servlet (Jersey will route based on /api/v1)
-        context.addServletMappingDecoded("/api/v1/*", "jersey-container-servlet");
+        // Map all requests within the context to the Jersey servlet
+        context.addServletMappingDecoded("/*", "jersey-container-servlet");
 
         // Start the server and keep it running
         System.out.println("Starting embedded Tomcat server on http://localhost:8080/api/v1 ...");
