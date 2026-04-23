@@ -29,7 +29,7 @@ Ideal for developers using the NetBeans environment with a local application ser
 4. In the **Run** category:
    - Set **Server** to **Apache Tomcat 9.0**.
    - Set **Java EE Version** to **Java EE 8 Web**.
-   - Set **Context Path** to `/`.
+   - Set **Context Path** to `/api/v1`.
 5. Right-click the project and select **Run**. NetBeans will automatically build the WAR, deploy it to your local Tomcat, and launch the service.
 6. The API will be available at: `http://localhost:8080/api/v1/`
 

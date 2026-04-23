@@ -8,7 +8,7 @@ import org.glassfish.jersey.server.ResourceConfig;
  * Maps all REST APIs to the "/api/v1" base path as per coursework requirements.
  * Using Jersey's ResourceConfig which extends javax.ws.rs.core.Application.
  */
-@ApplicationPath("/api/v1")
+@ApplicationPath("/")
 public class RestApplication extends ResourceConfig {
     public RestApplication() {
         // We will tell Jersey where to scan for our resources (controllers) and providers

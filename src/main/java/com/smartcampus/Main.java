@@ -21,11 +21,11 @@ public class Main {
         Tomcat.addServlet(context, "jersey-container-servlet", 
             new ServletContainer(new RestApplication()));
 
-        // Map all requests to the Jersey servlet (Jersey will route based on @ApplicationPath)
-        context.addServletMappingDecoded("/*", "jersey-container-servlet");
+        // Map all requests to the Jersey servlet (Jersey will route based on /api/v1)
+        context.addServletMappingDecoded("/api/v1/*", "jersey-container-servlet");
 
         // Start the server and keep it running
-        System.out.println("Starting embedded Tomcat server on http://localhost:8080...");
+        System.out.println("Starting embedded Tomcat server on http://localhost:8080/api/v1 ...");
         tomcat.start();
         tomcat.getServer().await();
     }
