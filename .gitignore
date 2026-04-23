@@ -14,3 +14,7 @@ Thumbs.db
 
 # Postman local data
 .postman/
+postman/
+
+# Project planning
+PLAN.md
