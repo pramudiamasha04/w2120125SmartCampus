@@ -15,12 +15,12 @@
 | `DataStore` singleton (ConcurrentHashMap) | ✅ Done |
 | `DiscoveryResource` (GET `/api/v1`) | ✅ Done |
 | README — Part 1 Q1 answer | ✅ Done |
-| Room Resource (CRUD) | ❌ Not started |
-| Sensor Resource (CRUD + filtering) | ❌ Not started |
-| Sub-Resource (SensorReadingResource) | ❌ Not started |
-| Custom exceptions + ExceptionMappers | ❌ Not started |
-| Logging filter | ❌ Not started |
-| README report answers (Q1.2 onwards) | ❌ Not started |
+| Room Resource (CRUD) | ✅ Done |
+| Sensor Resource (CRUD + filtering) | ✅ Done |
+| Sub-Resource (SensorReadingResource) | ✅ Done |
+| Custom exceptions + ExceptionMappers | ✅ Done |
+| Logging filter | ✅ Done |
+| README report answers (Q1.2 onwards) | ✅ Done |
 
 ---
 
