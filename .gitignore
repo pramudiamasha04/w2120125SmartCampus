@@ -2,3 +2,15 @@ target/
 .idea/
 *.iml
 .vscode/
+
+# Temporary files
+tomcat.*/
+*.log
+*.class
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Postman local data
+.postman/
