@@ -87,7 +87,7 @@
         <version>9.4.51.v20230217</version>
         <configuration>
           <webApp>
-            <contextPath>/</contextPath>
+            <contextPath>/api/v1</contextPath>
           </webApp>
           <scanIntervalSeconds>10</scanIntervalSeconds>
         </configuration>
