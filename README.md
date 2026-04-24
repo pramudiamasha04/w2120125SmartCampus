@@ -1,4 +1,4 @@
-## 📝 Coursework Report Answers
+## Coursework Report Answers
 
 ### Part 1: Service Architecture & Setup
 
